@@ -1,7 +1,16 @@
-version: "3.7"
+version: "3.8"
 services:
   discovery-server:
+    container_name: discovery-server
     build: .
     restart: always
     ports:
-      - 8080:8080
+      - 8761:8761
+    networks:
+      default:
+        aliases:
+          - rmqnet
+
+networks:
+  default:
+    name: rmqnet
