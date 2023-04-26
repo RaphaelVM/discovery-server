@@ -1,6 +1,9 @@
+### Global
 server:
   port: 8761
+### End Global
 
+### Kubernetes
 eureka:
   instance:
     hostname: "${HOSTNAME}.eureka"
@@ -9,3 +12,13 @@ eureka:
     fetch-registry: false
     serviceUrl:
       defaultZone: ${EUREKA_SERVER_ADDRESS}
+### End Kubernetes
+
+### Local
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+### End Local
